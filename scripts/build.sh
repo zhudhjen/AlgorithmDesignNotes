@@ -4,7 +4,7 @@ mkdir -p dist
 
 function build() {
     echo "building src/$1.md to dist/$1.html"
-    pandoc "src/$1.md" -s --highlight-style pygments -c '../static/github.css' -c '../static/styles.css' --mathjax='//zenozeng.github.io/MathJax/init.js' -o "dist/$1.html"
+    pandoc "src/$1.md" -s --highlight-style pygments -c '../static/github.css' -c '../static/styles.css' --mathjax='//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML' -o "dist/$1.html"
 }
 
 for file in src/*.md
